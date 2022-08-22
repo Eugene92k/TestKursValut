@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_valute_rates"
+        android:title="@string/menu_title_valute_rates"
+        android:icon="@drawable/money_orange"/>
+    <item
+        android:id="@+id/navigation_favourites_list"
+        android:title="@string/menu_title_favourites"
+        android:icon="@drawable/favourite_orange"/>
+</menu>
