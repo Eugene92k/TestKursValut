@@ -2,7 +2,6 @@ package com.example.testkursvalute.data.local.sharedpref
 
 import android.content.Context
 import android.content.SharedPreferences
-import android.provider.Settings.Global.putLong
 import androidx.core.content.edit
 import javax.inject.Inject
 import javax.inject.Singleton

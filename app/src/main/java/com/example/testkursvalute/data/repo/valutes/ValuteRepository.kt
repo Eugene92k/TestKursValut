@@ -5,6 +5,7 @@ import com.example.testkursvalute.api.model.Valute
 import com.example.testkursvalute.api.successed
 import com.example.testkursvalute.data.local.database.ValuteEntity
 import com.example.testkursvalute.data.local.sharedpref.ShardPrefStorage
+import com.example.testkursvalute.utils.Constants
 import java.util.*
 import javax.inject.Inject
 
@@ -49,10 +50,10 @@ class ValuteRepository @Inject constructor(
 
                         Result.Success(true)
                     } else {
-                        Result.Error("Ошибка")
+                        Result.Error(Constants.ERROR)
                     }
                 } else {
-                    Result.Error("Ошибка")
+                    Result.Error(Constants.ERROR)
                 }
             }
             else -> {
@@ -63,7 +64,7 @@ class ValuteRepository @Inject constructor(
 
     suspend fun updateFavouriteStatus(id: String): Result<ValuteEntity> {
         val result = valutesLocalDataSource.updateFavouriteStatus(id)
-        return result?.let { Result.Success(it) } ?: Result.Error("Ошибка")
+        return result?.let { Result.Success(it) } ?: Result.Error(Constants.ERROR)
     }
 
     fun loadData(): Boolean {

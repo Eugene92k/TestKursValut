@@ -11,11 +11,11 @@ class ValutesLocalDataSource @Inject constructor(private val database: ValuteDat
 
     suspend fun insertValutesIntoDatabase(valutesToInsert: List<ValuteEntity>) {
         if (valutesToInsert.isNotEmpty()) {
-            database.valuteDao().insertValutes(valutesToInsert)
+            database.valuteDao().insertValutesListEntity(valutesToInsert)
         }
     }
 
-    suspend fun favouriteIDs(): List<String> = database.valuteDao().favouriteIDs()
+    suspend fun favouriteIDs(): List<String> = database.valuteDao().favouriteIds()
 
     suspend fun updateFavouriteStatus(id: String): ValuteEntity? {
         val valute = database.valuteDao().valuteById(id)
@@ -31,7 +31,7 @@ class ValutesLocalDataSource @Inject constructor(private val database: ValuteDat
                 it.isFavourite.not()
             )
 
-            if (database.valuteDao().updateValutes(valuteEntity) > 0) {
+            if (database.valuteDao().updateValutesListEntity(valuteEntity) > 0) {
                 return valuteEntity
             }
         }

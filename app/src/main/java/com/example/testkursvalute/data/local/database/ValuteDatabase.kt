@@ -9,17 +9,17 @@ import androidx.room.RoomDatabase
     entities = [ValuteEntity::class],
     version = 1,
     exportSchema = false)
-abstract class ValuteDatabase: RoomDatabase() {
+abstract class ValuteDatabase : RoomDatabase() {
 
-abstract fun valuteDao(): ValuteDao
+    abstract fun valuteDao(): ValuteDao
 
-companion object {
-fun buildDatabase(context: Context): ValuteDatabase {
-return Room.databaseBuilder(
-    context,
-    ValuteDatabase::class.java,
-    "Valutes")
-    .build()
-}
-}
+    companion object {
+        fun buildDatabase(context: Context): ValuteDatabase {
+            return Room.databaseBuilder(
+                context,
+                ValuteDatabase::class.java,
+                "Valutes")
+                .build()
+        }
+    }
 }

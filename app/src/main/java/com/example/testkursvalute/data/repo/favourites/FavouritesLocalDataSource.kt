@@ -20,13 +20,12 @@ class FavouritesLocalDataSource @Inject constructor(private val database: Valute
                 it.name,
                 it.value,
                 it.previous,
-                it.isFavourite,
                 it.isFavourite.not()
             )
 
-            if (database.valuteDao().updateValutes(valuteEntity) > 0) {
-                    return valuteEntity
-                }
+            if (database.valuteDao().updateValutesListEntity(valuteEntity) > 0) {
+                return valuteEntity
+            }
         }
 
         return null

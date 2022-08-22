@@ -1,8 +1,7 @@
 package com.example.testkursvalute.api
 
-import android.provider.SyncStateContract
-import com.example.testkursvalute.api.Result
 import com.example.testkursvalute.api.model.GenericResponse
+import com.example.testkursvalute.utils.Constants
 import com.google.gson.Gson
 import okhttp3.ResponseBody
 import retrofit2.Response
@@ -18,10 +17,10 @@ abstract class BaseRemoteDataSource {
                 if (body != null) return Result.Success(body)
             } else if (response.errorBody() != null) {
                 val errorBody = getErrorBody(response.errorBody())
-                return error(errorBody?.message ?: ERROR)
+                return error(errorBody?.message ?: Constants.ERROR)
             }
 
-            return error(ERROR)
+            return error(Constants.ERROR)
         } catch (e: Exception) {
             return error(e.message ?: e.toString())
         }
@@ -37,9 +36,5 @@ abstract class BaseRemoteDataSource {
         } catch (e: Exception) {
             null
         }
-    }
-
-    companion object {
-        const val ERROR = "Ошибка"
     }
 }

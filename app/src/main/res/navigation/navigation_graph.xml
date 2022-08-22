@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/navigation_valute_rates">
+
+    <fragment
+        android:id="@+id/navigation_valute_rates"
+        android:name="com.example.testkursvalute.ui.valutelist.ValuteFragment"
+        android:label="@string/menu_title_valute_rates"
+        tools:layout="@layout/fragment_valute"/>
+    <fragment
+        android:id="@+id/navigation_favourites_list"
+        android:name="com.example.testkursvalute.ui.favourites.FavoutitesFragment"
+        android:label="@string/menu_title_favourites"
+        tools:layout="@layout/fragment_favourities"/>
+</navigation>

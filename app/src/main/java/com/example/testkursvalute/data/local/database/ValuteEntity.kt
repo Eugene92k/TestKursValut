@@ -6,7 +6,7 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "valutes_list")
 data class ValuteEntity(
     @PrimaryKey val id: String,
-    val numCode: String,
+    val numCode: String?,
     val charCode: String?,
     val nominal: Int?,
     val name: String?,
