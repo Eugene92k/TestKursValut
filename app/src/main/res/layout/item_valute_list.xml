@@ -6,6 +6,7 @@
     android:layout_height="wrap_content"
     android:layout_margin="10dp"
     android:backgroundTint="@color/blue_200"
+
     android:clickable="true"
     android:focusable="true"
     android:foreground="?android:attr/selectableItemBackground"
@@ -87,7 +88,7 @@
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_marginEnd="10dp"
-            android:src="@drawable/favourite"
+            android:src="@drawable/favorite_white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

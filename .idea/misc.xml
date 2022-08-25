@@ -14,10 +14,13 @@
         <entry key="..\:/Users/User/AndroidStudioProjects/TestKursValut/app/src/main/res/drawable/ic_baseline_attach_money_24.xml" value="0.1765" />
         <entry key="..\:/Users/User/AndroidStudioProjects/TestKursValut/app/src/main/res/drawable/ic_launcher.xml" value="0.1765" />
         <entry key="..\:/Users/User/AndroidStudioProjects/TestKursValut/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1765" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/TestKursValut/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.1765" />
         <entry key="..\:/Users/User/AndroidStudioProjects/TestKursValut/app/src/main/res/layout/activity_main.xml" value="0.2526041666666667" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/TestKursValut/app/src/main/res/layout/fragment_favourites.xml" value="0.1" />
         <entry key="..\:/Users/User/AndroidStudioProjects/TestKursValut/app/src/main/res/layout/fragment_favourities.xml" value="0.20735356990166737" />
         <entry key="..\:/Users/User/AndroidStudioProjects/TestKursValut/app/src/main/res/layout/fragment_favoutites.xml" value="0.2526041666666667" />
         <entry key="..\:/Users/User/AndroidStudioProjects/TestKursValut/app/src/main/res/layout/fragment_valute.xml" value="0.2526041666666667" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/TestKursValut/app/src/main/res/layout/fragment_valute_list.xml" value="0.20735356990166737" />
         <entry key="..\:/Users/User/AndroidStudioProjects/TestKursValut/app/src/main/res/layout/item_valute_list.xml" value="0.20735356990166737" />
         <entry key="..\:/Users/User/AndroidStudioProjects/TestKursValut/app/src/main/res/menu/main_bottom_menu.xml" value="0.20735356990166737" />
         <entry key="..\:/Users/User/AndroidStudioProjects/TestKursValut/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1765" />

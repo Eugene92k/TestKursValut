@@ -1,16 +1,25 @@
-package com.example.testkursvalute.data.repo.favourites
+package com.example.testkursvalute.data.repo.valutesList
 
 import androidx.lifecycle.LiveData
 import com.example.testkursvalute.data.local.database.ValuteDatabase
 import com.example.testkursvalute.data.local.database.ValutesListEntity
+
 import javax.inject.Inject
 
 
-class FavouritesLocalDataSource @Inject constructor(private val database: ValuteDatabase) {
+class ValutesListLocalDataSource @Inject constructor(private val database: ValuteDatabase) {
 
-    val favouriteValutes: LiveData<List<ValutesListEntity>> =
-        database.valutesListDao().favouriteValutes()
+    val allValutesList: LiveData<List<ValutesListEntity>> =
+        database.valutesListDao().valutesListLiveData()
 
+
+    suspend fun insertValutesIntoDatabase(valutesToInsert: List<ValutesListEntity>) {
+        if (valutesToInsert.isNotEmpty()) {
+            database.valutesListDao().insertValutesListEntity(valutesToInsert)
+        }
+    }
+
+    suspend fun favouriteIds(): List<String> = database.valutesListDao().favouriteIds()
 
     suspend fun updateFavouriteStatus(id: String): ValutesListEntity? {
         val valute = database.valutesListDao().valuteById(id)
