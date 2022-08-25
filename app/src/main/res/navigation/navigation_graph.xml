@@ -7,12 +7,12 @@
 
     <fragment
         android:id="@+id/navigation_valute_rates"
-        android:name="com.example.testkursvalute.ui.valutelist.ValuteFragment"
+        android:name="com.example.testkursvalute.ui.valutelist.ValuteListFragment"
         android:label="@string/menu_title_valute_rates"
-        tools:layout="@layout/fragment_valute"/>
+        tools:layout="@layout/fragment_valute_list"/>
     <fragment
         android:id="@+id/navigation_favourites_list"
-        android:name="com.example.testkursvalute.ui.favourites.FavoutitesFragment"
+        android:name="com.example.testkursvalute.ui.favorites.FavouritesFragment"
         android:label="@string/menu_title_favourites"
-        tools:layout="@layout/fragment_favourities"/>
+        tools:layout="@layout/fragment_favourites"/>
 </navigation>

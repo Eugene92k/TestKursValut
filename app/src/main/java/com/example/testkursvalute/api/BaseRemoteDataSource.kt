@@ -1,10 +1,11 @@
 package com.example.testkursvalute.api
 
 import com.example.testkursvalute.api.model.GenericResponse
-import com.example.testkursvalute.utils.Constants
+import com.example.testkursvalute.util.Constants
 import com.google.gson.Gson
 import okhttp3.ResponseBody
 import retrofit2.Response
+
 
 abstract class BaseRemoteDataSource {
 
@@ -17,10 +18,10 @@ abstract class BaseRemoteDataSource {
                 if (body != null) return Result.Success(body)
             } else if (response.errorBody() != null) {
                 val errorBody = getErrorBody(response.errorBody())
-                return error(errorBody?.message ?: Constants.ERROR)
+                return error(errorBody?.message ?: Constants.UNEXPECTED_ERROR)
             }
 
-            return error(Constants.ERROR)
+            return error(Constants.UNEXPECTED_ERROR)
         } catch (e: Exception) {
             return error(e.message ?: e.toString())
         }
